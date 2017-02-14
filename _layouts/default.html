@@ -5,12 +5,13 @@
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
-	<body>		
-		<nav>		
+	<body>
+		<nav>
     		<ul>
 			<li><b href="/">BOAKYE DANKWA</b></li>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
+        		<li><a href="/">Home</a></li>	        
+						<li><a href="/about/"{% if page.url contains "/about/" %}class="active"{% endif %}>About me</a></li>
+						<li><a href="/cv">Projects</a></li>
         		<li><a href="/cv">Resume</a></li>
         		<li><a href="/blog">Blog</a></li>
     		</ul>
@@ -18,7 +19,7 @@
 		<div class="container">
 
 			{{ content }}
-			
+
 		</div><!-- /.container -->
 		<footer>
     		<ul>
